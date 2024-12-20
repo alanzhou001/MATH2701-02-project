@@ -45,7 +45,7 @@ seed = 52
 
 # 计算混合高斯分布的期望和方差
 EZ = mu1 * (1 - p) + (mu1 + mu2) * p
-DZ = sigma1 * (1 - p) + (sigma1 + sigma2) * p
+DZ = sigma1 + p * sigma2 + mu2 ** 2 * p * (1 - p)
 
 # 不同的n值
 n_values = [2, 3, 4, 5, 10, 20, 50, 1000, 5000]
